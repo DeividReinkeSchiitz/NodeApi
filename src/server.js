@@ -25,4 +25,6 @@ app.use(router);
 app.use(cors());
 
 const PORT = 3939;
-app.listen(PORT, () => console.log(`Server running in port: ${PORT}`));
+app.listen(process.env.PORT || PORT, () =>
+  console.log(`Server running in port: ${PORT}`)
+);
